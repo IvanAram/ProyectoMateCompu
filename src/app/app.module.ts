@@ -5,6 +5,7 @@ import { LoginPage } from '../pages/login/login';
 import { ListaPacientesPage } from '../pages/lista-pacientes/lista-pacientes';
 import { InfoPacientePage } from '../pages/info-paciente/info-paciente';
 import { AddPacientePage } from '../pages/add-paciente/add-paciente';
+import { AddSignosVitalesPage } from '../pages/add-signos-vitales/add-signos-vitales';
 import { HttpService } from '../providers/http-service';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ListaPacientesPage,
     InfoPacientePage,
-    AddPacientePage
+    AddPacientePage,
+    AddSignosVitalesPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,7 +29,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ListaPacientesPage,
     InfoPacientePage,
-    AddPacientePage
+    AddPacientePage,
+    AddSignosVitalesPage
   ],
   providers: [
     StatusBar,

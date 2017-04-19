@@ -24,4 +24,8 @@ export class HttpService {
   add(paciente){
     return this.http.post(this.prefix + 'servicio.pacientes.insert.php', JSON.stringify(paciente), {headers: this.headers}).map(res => res.json());
   }
+
+  addHistorial(matricula){
+    return this.http.post(this.prefix + 'servicio.pacientes.historial.php', JSON.stringify(matricula), {headers: this.headers}).map(res => res.json());
+  }
 }

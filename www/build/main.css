@@ -24525,6 +24525,15 @@ page-add-paciente #form-btn .button {
   color: white;
 }
 
+page-info-paciente #button {
+  color: white;
+  border-radius: 5px;
+}
+
+page-info-paciente ion-footer {
+  padding: 5px 12px;
+}
+
 page-lista-pacientes .item button {
   background-color: transparent;
   width: 100%;
