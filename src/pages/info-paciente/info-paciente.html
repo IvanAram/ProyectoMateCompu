@@ -16,5 +16,21 @@
 		<ion-item>
 			Signos vitales:
 		</ion-item>
+		<div *ngIf="!paciente.hasOwnProperty('signosVitales')">
+			<ion-item>
+				No han sido tomados.
+			</ion-item>
+		</div>
+		<div *ngIf="paciente.hasOwnProperty('signosVitales')">
+			<ion-item> · Frecuencia cardiaca: {{paciente.signosVitales.frecCard}}</ion-item>
+			<ion-item> · Frecuencia respiratoria: {{paciente.signosVitales.frecResp}}</ion-item>
+			<ion-item> · Presion: {{paciente.signosVitales.presion}}</ion-item>
+			<ion-item> · Temperatura: {{paciente.signosVitales.temperatura}}</ion-item>
+		</div>
 	</ion-list>
 </ion-content>
+
+<ion-footer>
+	
+
+</ion-footer>
