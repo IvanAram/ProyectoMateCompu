@@ -1,0 +1,15 @@
+page-lista-pacientes {
+	.item button{
+		background-color: transparent;
+		width: 100%;
+		border-radius: 5px;
+	}
+
+	.item .info{
+		text-align: left;
+	}
+
+	.item .status{
+		text-align: right;
+	}
+}

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Añadir paciente</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<form [formGroup]="newInfoPaciente">
+			<ion-item>
+				<ion-label>Consulta:</ion-label>
+				<ion-select formControlName="servicio">
+					<ion-option value="terapia" selected>Terapia</ion-option>
+					<ion-option value="urgencia">Urgencia</ion-option>
+				</ion-select>
+			</ion-item>
+			<ion-item>
+				<ion-label floating style="color:gray">Nombre</ion-label>
+				<ion-input type="text" formControlName="nombre"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-label floating style="color:gray">Matricula</ion-label>
+				<ion-input type="text" formControlName="matricula"></ion-input>
+			</ion-item>
+			<ion-item id="form-btn" no-lines>
+				<button full ion-button (click)="add()">
+					Añadir
+				</button>
+			</ion-item>
+		</form>
+	</ion-list>
+</ion-content>

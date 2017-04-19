@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<form [formGroup]="loginForm" style="padding-bottom:30px">
+			<ion-item>
+				<ion-label>Role</ion-label>
+				<ion-select formControlName="role" (ionChange)="checkValue()">
+					<ion-option value="doctor" selected>Doctor</ion-option>
+					<ion-option value="asistente">Assistant</ion-option>
+				</ion-select>
+			</ion-item>
+			<div *ngIf="isDoctor">
+				<ion-item>
+					<ion-label floating style="color:gray">Matricula</ion-label>
+					<ion-input type="text" formControlName="matricula"></ion-input>
+				</ion-item>
+			</div>
+			<div *ngIf="isDoctor">
+				<ion-item>
+					<ion-label floating style="color:gray">Password</ion-label>
+					<ion-input type="password" formControlName="password"></ion-input>
+				</ion-item>
+			</div>
+		</form>
+	</ion-list>
+</ion-content>
+
+<ion-footer>
+	<button ion-button full id="login-button" (click)="login()">
+		Login
+	</button>
+</ion-footer>
